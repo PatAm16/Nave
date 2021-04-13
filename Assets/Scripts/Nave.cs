@@ -21,6 +21,8 @@ public class Nave : MonoBehaviour
     float torqueForce = 25f;
 
 
+
+
     [SerializeField]
     float combustivel = 500f;
 
@@ -45,6 +47,7 @@ public class Nave : MonoBehaviour
             { 
 
             GetComponent<Rigidbody2D>().AddForce(thrustForce * transform.up * Time.deltaTime);
+            combustivel -= combustivelTorque * Time.deltaTime;
 
             }
 
