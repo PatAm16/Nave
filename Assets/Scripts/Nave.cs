@@ -16,11 +16,6 @@ public class Nave : MonoBehaviour
     [SerializeField]
     float torqueForce = 25f;
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if(Input.GetKey(KeyCode.UpArrow))
@@ -43,7 +38,6 @@ public class Nave : MonoBehaviour
         {
             //Bati na plataforma
             Debug.Log("Aterrei na plataforma");
-
             if (collision.relativeVelocity.magnitude < maxRelativeVelocity || Mathf.Abs(transform.localEulerAngles.z) > maxRotation)
             {
                 Debug.Log("Mas rebentei!");
