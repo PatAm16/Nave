@@ -600,7 +600,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRelativeVelocity: 2
+  maxRotation: 10
   thrustForce: 150
+  torqueForce: 25
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0e28b413fe463b8eeac15fe96fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnVelocity: 2.5
+  turnVelocity: 600
   fuel: 500
   thurstVelocity: 150
   fuelBurn: 10
