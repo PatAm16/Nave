@@ -22,7 +22,7 @@ public class Nave : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.UpArrow))
         {
-            GetComponent<Rigidbody2D>().AddForce(thrustForce * Vector2.up * Time.deltaTime);
+            GetComponent<Rigidbody2D>().AddForce(thrustForce * transform.up * Time.deltaTime);
 
         } else if(Input.GetKey(KeyCode.LeftArrow))
         {
