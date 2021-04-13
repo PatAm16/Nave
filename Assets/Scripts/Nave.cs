@@ -5,7 +5,10 @@ using UnityEngine;
 public class Nave : MonoBehaviour
 {
     [SerializeField]
-    float maxRelativeVelocity = 10f;
+    float maxRelativeVelocity = 2f;
+
+    [SerializeField]
+    float maxRotation = 10f;
 
     [SerializeField]
     float thrustForce = 150f;
@@ -36,12 +39,12 @@ public class Nave : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "Platform")
         {
             //Bati na plataforma
             Debug.Log("Aterrei na plataforma");
-        
-            if (collision.relativeVelocity.magnitude < maxRelativeVelocity)
+
+            if (collision.relativeVelocity.magnitude < maxRelativeVelocity || Mathf.Abs(transform.localEulerAngles.z) > maxRotation)
             {
                 Debug.Log("Mas rebentei!");
             }
